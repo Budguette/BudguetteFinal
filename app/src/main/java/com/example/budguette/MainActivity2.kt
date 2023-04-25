@@ -7,11 +7,17 @@ import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity2 : AppCompatActivity() {
+
+    companion object {
+        var fm: FragmentManager? = null
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val fragmentManager: FragmentManager = supportFragmentManager
+        fm = supportFragmentManager
 
         // define your fragments here
         val fragment1: Fragment = Home()
@@ -27,10 +33,10 @@ class MainActivity2 : AppCompatActivity() {
             when (item.itemId) {
                 R.id.home -> fragment = fragment1
                 R.id.library -> fragment = fragment2
-                R.id.camera-> fragment = fragment3
-                R.id.profile-> fragment = fragment4
+                R.id.camera -> fragment = fragment3
+                R.id.profile -> fragment = fragment4
             }
-            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit()
+            fm!!.beginTransaction().replace(R.id.frame, fragment).commit()
             true
         }
 

@@ -1,7 +1,6 @@
 package com.example.budguette
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Profile.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Profile : Fragment() {
+class Profile : androidx.fragment.app.Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
