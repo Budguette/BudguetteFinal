@@ -1,6 +1,5 @@
 package com.example.budguette
 
-import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Bundle
@@ -11,7 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoryAdapter(private val categories: List<Category>, private val  categoryInstance: CategoryInstance) :
+class CategoryAdapter(private val categories: List<Category>, private val categoryInstance: Budget) :
     RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {
 
     private val colors = arrayOf(
